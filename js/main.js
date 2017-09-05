@@ -2,8 +2,8 @@ console.log('it loaded...')
 
 // Enter player names
 
-var playerOneName = $('')
-var playerTwoName = $('')
+var playerOneName = ('')
+var playerTwoName = ('')
 var p1Score = 0
 var p2Score = 0
 
@@ -22,7 +22,10 @@ function getNames() {
 
 var $theForm = $('form')
 $theForm.on('submit', function(event){
-    if (document.getElementById('p1-name').value = '' || document.getElementById('p2-name').value === ''){
+    if (document.getElementById('p1-name').value === '') {
+        confirm('Enter your Name!')
+        console.log('No Names Added')
+    } if (document.getElementById('p2-name').value === '') {
         confirm('Enter your Name!')
         console.log('No Names Added')
     } else { 
@@ -37,8 +40,10 @@ $theForm.on('submit', function(event){
 
 var newGame = $('#play-game')
 newGame.on('click', function() {
+
     // Remove Start Button
     newGame.remove('#play-game')
+
     // Timer Starts
     var counter = 30
     var timer = document.querySelector('.timer')
@@ -54,6 +59,7 @@ newGame.on('click', function() {
             console.log('Time is Ticking')
         }
     }
+
     // Make Fly Appear
     var theFly = $('<div>').addClass('new-fly').text('FLY')
     theFly.css ({
@@ -69,10 +75,11 @@ newGame.on('click', function() {
                 borderRadius: Math.random() * 10,
             }, 1000)
         }, 1000)
+
     // If Fly is Clicked, Remove from board and add 1 point to score
     $(theFly).click(function() {
         console.log('fly has been swatted')
-        p1Score.innerText += p1Score + 1;
+        p1Score.innerText = p1Score + 1;
         console.log('score added to player')
         $(this).remove();
         return $(theFly);
