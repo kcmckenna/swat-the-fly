@@ -1,3 +1,39 @@
-h1 {
-    color: blue
+#game-title {
+    color: orangered;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    position: relative;
+}
+#play-game {
+    align-content: center;
+    position: relative;
+    background: yellow;
+    margin: 225px 250px;
+    width: 100px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 15px;
+}
+
+#game-container {
+    width: 600px;
+    height: 600px;
+    border: 5px solid orange;
+}
+
+.new-fly {
+    background-image: url("http://images.clipartpanda.com/fly-clip-art-fly2-hi.png");
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+}
+
+span {
+    width: 590px;
+    height: 590px;
+}
+
+.custom { 
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 15, auto; 
+    width: 15px;
+    height: 15px;
 }
