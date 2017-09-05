@@ -1,15 +1,44 @@
+h2 {
+    color: #F5D026;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 5px 5px #494949;
+    text-align: center;
+    font-size: 30px;
+}
+
+#p1-score-text {
+    color: #F5D026;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 3px 3px #494949;
+    float: left;
+    display: block;
+    margin: 20px 45px;
+}
+
+#p2-score-text{
+    color: #F5D026;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 3px 3px #494949;
+    float: right;
+    display: block;
+    margin: 0px 45px;
+}
+
 h1 {
     color: #F5D026;
     font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 5px 5px #494949;
     text-align: center;
     font-size: 60px;
-    text-shadow: 5px 5px #494949;
+    clear: both;
 }
+
 #play-game {
     align-content: center;
     position: relative;
     background: yellow;
-    margin: 225px 250px;
+    display: block;
+    margin: 115px 110px;
     width: 100px;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 15px;
@@ -23,13 +52,18 @@ h1 {
     border: 10px ridge orange;
 }
 
+.form-bar{
+    margin-left: 150px; 
+}
+
 input {
     font-family: 'Gloria Hallelujah', cursive;
     width: 100px;
 }
 
 .submit {
-    height: 27px;
+    height: 25px;
+    width: 100px;
     font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -40,11 +74,6 @@ input {
     display: none;
     position: absolute;
     color: white;
-}
-
-span {
-    width: 590px;
-    height: 590px;
 }
 
 .custom { 

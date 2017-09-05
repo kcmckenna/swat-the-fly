@@ -64,6 +64,6 @@ if (p2Score.innerHTML > p1Score.innerHTML){
     prompt('Player Two is the Winner!');
 }
 
-p1Score.innerHTML += score1;
+// p1Score.innerHTML += score1;
 
 // Restart game
