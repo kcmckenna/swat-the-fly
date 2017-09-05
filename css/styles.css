@@ -12,16 +12,16 @@ h2 {
     text-shadow: 3px 3px #494949;
     float: left;
     display: block;
-    margin: 20px 40px;
+    margin: 10px 40px;
 }
 
 .timer {
     color: #F5D026;
     font-family: 'Gloria Hallelujah', cursive;
     text-shadow: 3px 3px #494949;
-    float: left;
+    position: fixed;
     display: block;
-    margin: 0px 0px 0px 25px;
+    margin: -10px 0px 0px 265px;
 }
 
 #p2-score-text{
@@ -30,24 +30,26 @@ h2 {
     text-shadow: 3px 3px #494949;
     float: right;
     display: block;
-    margin: 0px 40px;
+    margin: -10px 40px 0px;
 }
 
 h1 {
     color: #F5D026;
+    max-width: 400px;
     font-family: 'Gloria Hallelujah', cursive;
     text-shadow: 5px 5px #494949;
-    text-align: center;
-    font-size: 60px;
+    font-size: 55px;
+    margin-bottom: 45px;
+    margin-left: -20px;
     clear: both;
 }
 
 #play-game {
     align-content: center;
-    position: relative;
     background: yellow;
+    position: fixed;
     display: block;
-    margin: 115px 110px;
+    margin: 265px 255px;
     width: 100px;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 15px;
@@ -78,15 +80,16 @@ input {
 
 .new-fly {
     /* background: url("http://images.clipartpanda.com/fly-clip-art-fly2-hi.png"); */
-    background: radial-gradient(circle at 100px 100px, #5cabff, #000); 
-    background-repeat: no-repeat;
+    background: radial-gradient(circle at 150px 150px, #5cabff, #7B6969);
+    width: 50px;
+    height: 50px; 
     display: none;
     position: absolute;
     color: white;
 }
 
 .custom { 
-    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 15, auto; 
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
     width: 15px;
     height: 15px;
 }
