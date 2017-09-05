@@ -15,9 +15,20 @@
 <body>
     <div id="game-container" class="custom">
         <h1 id="game-title">Swat the Fly!</h1>
-        <button id="play-game">Start</button>
-        <span class="custom"></span>
+        <h2>Player One:</h2>
+        <h3 id="player-one-score"></h3>
+        <h2>Player Two:</h2>
+        <h3 id="player-two-score"></h3>
+        <div class="form-bar">
+            <form>
+                <input id="p1-name" type="text" placeholder="Player 1" />
+                <input id="p2-name" type="text" placeholder="Player 2" />
+                <button class="submit">Submit</button>
+            </form>
+                <button id="play-game">Start</button>
+        </div>
     </div>
+        <span class="custom"></span>
     <script src="js/main.js"></script>
 </body>
 </html>

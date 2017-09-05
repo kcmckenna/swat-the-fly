@@ -1,8 +1,9 @@
-#game-title {
-    color: orangered;
+h1 {
+    color: #F5D026;
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
-    position: relative;
+    font-size: 60px;
+    text-shadow: 5px 5px #494949;
 }
 #play-game {
     align-content: center;
@@ -15,16 +16,30 @@
 }
 
 #game-container {
+    display: block;
+    background-image: url("http://www.austop.net.au/media/catalog/category/3d-wood-table-top-background-with-tabletop-background-tabletop-background-tabletop.jpg");
     width: 600px;
     height: 600px;
-    border: 5px solid orange;
+    border: 10px ridge orange;
+}
+
+input {
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 100px;
+}
+
+.submit {
+    height: 27px;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .new-fly {
-    background-image: url("http://images.clipartpanda.com/fly-clip-art-fly2-hi.png");
+    /* background: url("http://images.clipartpanda.com/fly-clip-art-fly2-hi.png"); */
+    background: radial-gradient(circle at 100px 100px, #5cabff, #000); 
     background-repeat: no-repeat;
     display: none;
     position: absolute;
+    color: white;
 }
 
 span {
