@@ -27,7 +27,6 @@ $theForm.on('submit', function(event){
         console.log('Names Added')
         $('.form-bar').fadeOut(2000);
     }
-    
 })
 
 // Start game
@@ -35,7 +34,7 @@ $theForm.on('submit', function(event){
 var newGame = $('#play-game')
 newGame.on('click', function() {
     newGame.remove('#play-game')
-    newGame.remove('#game-title')
+    newGame.remove('h1')
     var theFly = $('<div>').addClass('new-fly').text('FLY')
     theFly.css ({
         left: Math.random() * 550,
@@ -57,24 +56,54 @@ newGame.on('click', function() {
         return $(theFly);
         console.log('new fly appeared')
         })
-    // if (theFly === '') {    
+    // if (theFly) {    
     // $('body').append(newGame.button)
     // } 
 })
 
 // Timer for the game
 
+var counter = 30
+var timer = document.querySelector('.timer')
+function fn(){
+    if (counter === 0){
+        clearInterval(theIntervalId)
+        timer.innerHTML = "Timer: " + counter
+        console.log('Time is Done')
+    } else {
+        counter = (counter - 1)
+        timer.innerHTML = "Timer: " + counter
+        console.log('Time is Ticking')
+    }
+}
+var theIntervalId = setInterval(fn, 1000)
+
 // var timeUp = setTimeout(theTimer, 30000);
 
 //     function theTimer() {
 //         switchPlayer();
 //     } 
-    
 //     clearTimeout(timeUp)
+
+
+
+// Keep track of score
+
+var flyIsSwatted = false;
+function clickSpotter(){
+    flyIsSwatted = true;
+  }
+  var fly = document.getElementsByClassName('new-fly');
+  fly.addEventListener('click', clickSpotter); 
+
+if (flyIsSwatted = true) { 
+p1Score.innerHTML += score1;
+document.getElementById('player-one-score').innerHTML = p1Score;
+} 
 
 // Declare winner of the game
 
-// var winner 
+// var winner = ''
 
 // if (p1Score.innerHTML > p2Score.innerHTML){
 //     prompt('Player One is the Winner!')
@@ -82,6 +111,7 @@ newGame.on('click', function() {
 //     prompt('Player Two is the Winner!');
 // }
 
-// p1Score.innerHTML += score1;
 
 // Restart game
+
+
