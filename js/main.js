@@ -2,16 +2,32 @@ console.log('it loaded...')
 
 // Enter player names
 
-var $playerName = []
+var playerOneName = $('')
+var playerTwoName = $('')
+var p1Score = 0
+var p2Score = 0
 
-var $theForm = $('.form-bar')
+function getNames() {
+    var playerOneName = document.getElementById('p1-name').value;
+    document.getElementById('p1-score-text').innerText = playerOneName + ":";
+    console.log(playerOneName)
+    var playerTwoName = document.getElementById('p2-name').value;
+    document.getElementById('p2-score-text').innerText = playerTwoName + ":";
+    console.log(playerTwoName)
+}
+
+var $theForm = $('form')
 $theForm.on('submit', function(event){
-    event.preventDefault()
-    if ($playerName.val() === ''){
-        confirm("Enter your Name!")
+    if (document.getElementById('p1-name').value = '' || document.getElementById('p2-name').value === ''){
+        confirm('Enter your Name!')
+        console.log('No Names Added')
     } else { 
-
+        event.preventDefault()
+        getNames();
+        console.log('Names Added')
+        $('.form-bar').fadeOut(2000);
     }
+    
 })
 
 // Start game
@@ -32,37 +48,39 @@ newGame.on('click', function() {
                 left: Math.random() * 550,
                 top: Math.random() * 550,
                 borderRadius: Math.random() * 10,
-            }, 750)
-        }, 750)
+            }, 1000)
+        }, 1000)
     $(theFly).click(function() {
         console.log('fly has been swatted')
-        p1Score.innerHTML += scoreP1;
+        // p1Score.innerHTML += scoreP1;
         $(this).remove();
+        return $(theFly);
+        console.log('new fly appeared')
         })
-    if (theFly === '') {    
-    $('body').append(newGame.button)
-    } 
+    // if (theFly === '') {    
+    // $('body').append(newGame.button)
+    // } 
 })
 
 // Timer for the game
 
-var timeUp = setTimeout(theTimer, 30000);
+// var timeUp = setTimeout(theTimer, 30000);
 
-    function theTimer() {
-        switchPlayer();
-    } 
+//     function theTimer() {
+//         switchPlayer();
+//     } 
     
-    clearTimeout(timeUp)
+//     clearTimeout(timeUp)
 
 // Declare winner of the game
 
-var winner 
+// var winner 
 
-if (p1Score.innerHTML > p2Score.innerHTML){
-    prompt('Player One is the Winner!')
-if (p2Score.innerHTML > p1Score.innerHTML){ 
-    prompt('Player Two is the Winner!');
-}
+// if (p1Score.innerHTML > p2Score.innerHTML){
+//     prompt('Player One is the Winner!')
+// if (p2Score.innerHTML > p1Score.innerHTML){ 
+//     prompt('Player Two is the Winner!');
+// }
 
 // p1Score.innerHTML += score1;
 

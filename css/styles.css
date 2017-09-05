@@ -12,7 +12,16 @@ h2 {
     text-shadow: 3px 3px #494949;
     float: left;
     display: block;
-    margin: 20px 45px;
+    margin: 20px 40px;
+}
+
+.timer {
+    color: #F5D026;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 3px 3px #494949;
+    float: left;
+    display: block;
+    margin: 0px 0px 0px 25px;
 }
 
 #p2-score-text{
@@ -21,7 +30,7 @@ h2 {
     text-shadow: 3px 3px #494949;
     float: right;
     display: block;
-    margin: 0px 45px;
+    margin: 0px 40px;
 }
 
 h1 {
