@@ -10,7 +10,6 @@ span {
     color: #F5D026;
     font-family: 'Gloria Hallelujah', cursive;
     text-shadow: 3px 3px #494949;
-    text-align: center;
     font-size: 30px;
 }
 
@@ -20,7 +19,7 @@ span {
     text-shadow: 3px 3px #494949;
     float: left;
     display: block;
-    margin: 10px 40px;
+    margin: 0px 40px;
 }
 
 .timer {
@@ -38,7 +37,7 @@ span {
     text-shadow: 3px 3px #494949;
     float: right;
     display: block;
-    margin: -10px 40px 0px;
+    margin: 0px 40px 0px;
 }
 
 h1 {
@@ -47,7 +46,7 @@ h1 {
     font-family: 'Gloria Hallelujah', cursive;
     text-shadow: 5px 5px #494949;
     font-size: 55px;
-    margin-bottom: 45px;
+    margin-bottom: 68px;
     margin-left: -20px;
     clear: both;
 }
@@ -57,8 +56,9 @@ h1 {
     background: yellow;
     position: fixed;
     display: none;
-    margin: 265px 255px;
+    margin: 285px 90px;
     width: 100px;
+    height: 35px; 
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 15px;
 }
@@ -69,6 +69,7 @@ h1 {
     width: 600px;
     height: 600px;
     border: 10px ridge orange;
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto;
 }
 
 .form-bar{
@@ -86,11 +87,7 @@ input {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
-
-
 /* .new-fly {
-    background: url("../images/fly.gif"); 
-    /* background: radial-gradient(circle at 150px 150px, #5cabff, #7B6969); */
     width: 40px;
     height: 40px; 
     display: none;
@@ -111,4 +108,14 @@ img {
     position: absolute;
     color: white;
     cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
+}
+
+.winner {
+    color: #F5D026;
+    max-width: 400px;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 5px 5px #494949;
+    font-size: 55px;
+    margin-bottom: 45px;
+    margin-left: -20px;
 }
