@@ -1,5 +1,3 @@
-console.log('it loaded...')
-
 // Enter player names
 
 var p1 = {score: 0, name: '', board: $('#player-one-score')}
@@ -7,8 +5,6 @@ var p2 = {score: 0, name: '', board: $('#player-two-score')}
 // var players = {p1, p2}
 var currentPlayer = p1 
 var switchPlayer = p2
-
-// var p1ScoreBoard = document.getElementById('player-one-score')
 
 // Function to retrieve names and add to board
 
@@ -36,9 +32,10 @@ function getNames() {
             getNames();
             console.log('Names Added')
             $('.form-bar').fadeOut(1000);
-            $('#play-game').fadeIn(3000);
+            $('#play-game').fadeIn(1000);
         }
     })
+
 // $('.form-bar').hide(); // Remove this line to show the form
 
 // Start game
@@ -52,7 +49,7 @@ newGame.on('click', function() {
     // credit to soundbible.com for audio (http://soundbible.com/396-Fly-Buzzing.html)
     flyBuzzing.loop = true
     flyBuzzing.play()
-    var counter = 5
+    var counter = 10
     var timer = document.querySelector('.timer')
     var theIntervalId = setInterval(fn, 1000)
     function fn(){
@@ -74,13 +71,11 @@ newGame.on('click', function() {
             console.log('Time is Ticking')
         }
     }
+    
     // Make Fly Appear
-    var theFly = $('<img src="images/fly.gif">') //$('<div>').addClass('new-fly').text('FLY')
+
+    var theFly = $('<img src="images/fly.gif">')
     // Source for fly image (https://atomic8497.deviantart.com/art/Fly-651283182)
-    // theFly.css ({
-    //     left: Math.random() * 550,
-    //     top: Math.random() * 550,
-    // })
     $("#game-container").append(theFly)
     function showFly() {
         theFly.css ({
@@ -92,23 +87,27 @@ newGame.on('click', function() {
             theFly.animate ({
                 left: Math.random() * 550,
                 top: Math.random() * 550,
-            }, 1000)
-        }, 1000)
+            }, 1500)
+        }, 1500)
     } 
     showFly();
-    // If Fly is swatted, remove from board, respawn, and add 1 point to score
+
+    // If Fly is 'Swatted', Remove from Board, Respawn, 
+    // and Add 1 pt to Current Player's Score
+    
     $(theFly).click(function() {
         console.log('fly has been swatted')
         var flySplat = new Audio('sounds/fly_splat.mp3')
         // credit to soundbible.com for audio (http://soundbible.com/tags-splat.html)
         flySplat.play()
-        console.log(currentPlayer.score)
         currentPlayer.score = currentPlayer.score + 1;
         console.log(currentPlayer.score)
-        currentPlayer.board.text(currentPlayer.score) // <---- FIXED!
+        currentPlayer.board.text(currentPlayer.score)
         console.log('score added to player scoreboard')
         $(this).hide();
-        showFly();
+            if (counter != 0) {
+                showFly();
+            }
         console.log('new fly appeared')
         })
 
@@ -119,6 +118,7 @@ newGame.on('click', function() {
 //         switchPlayer();
 
 // Declare winner of the game
+
 // var winner = ''
 // function findWinner() {
 //     if (p1.score > p2.score){
@@ -140,6 +140,7 @@ newGame.on('click', function() {
 
 // function resetGame () {
 //     newGame.show('#play-game')
+//     $theForm (":reset")
 //     p1 = ''
 //     p2 = '' 
 // }
