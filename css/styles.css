@@ -6,6 +6,14 @@ h2 {
     font-size: 30px;
 }
 
+span {
+    color: #F5D026;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-shadow: 3px 3px #494949;
+    text-align: center;
+    font-size: 30px;
+}
+
 #p1-score-text {
     color: #F5D026;
     font-family: 'Gloria Hallelujah', cursive;
@@ -48,7 +56,7 @@ h1 {
     align-content: center;
     background: yellow;
     position: fixed;
-    display: block;
+    display: none;
     margin: 265px 255px;
     width: 100px;
     font-family: 'Gloria Hallelujah', cursive;
