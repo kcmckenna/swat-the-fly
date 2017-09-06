@@ -86,11 +86,14 @@ input {
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+
+
 .new-fly {
-    /* background: url("http://images.clipartpanda.com/fly-clip-art-fly2-hi.png"); */
+    /* background: url(images/fly.gif);  */
     background: radial-gradient(circle at 150px 150px, #5cabff, #7B6969);
-    width: 50px;
-    height: 50px; 
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
+    width: 40px;
+    height: 40px; 
     display: none;
     position: absolute;
     color: white;
