@@ -88,19 +88,27 @@ input {
 
 
 
-.new-fly {
-    /* background: url(images/fly.gif);  */
-    background: radial-gradient(circle at 150px 150px, #5cabff, #7B6969);
-    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
+/* .new-fly {
+    background: url("../images/fly.gif"); 
+    /* background: radial-gradient(circle at 150px 150px, #5cabff, #7B6969); */
     width: 40px;
     height: 40px; 
     display: none;
     position: absolute;
     color: white;
-}
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
+} */
 
 .custom { 
     cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
     width: 15px;
     height: 15px;
+}
+img {
+    width: 40px;
+    height: 40px; 
+    display: none;
+    position: absolute;
+    color: white;
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
 }
