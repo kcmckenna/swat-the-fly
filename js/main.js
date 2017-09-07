@@ -2,10 +2,10 @@
 
 var p1 = {score: 0, name: '', board: $('#player-one-score'), takeTurn: false}
 var p2 = {score: 0, name: '', board: $('#player-two-score'), takeTurn: false}
-// var players = {p1, p2}
 var currentPlayer = p1 
-var switchPlayer = p2
-
+// var players = {p1, p2}
+// var switchPlayer = p2
+var turnsTaken = 0
 // Function to retrieve names and add to board
 
 function getNames() {
@@ -49,7 +49,8 @@ newGame.on('click', function() {
     // credit to soundbible.com for audio (http://soundbible.com/396-Fly-Buzzing.html)
     flyBuzzing.loop = true
     flyBuzzing.play()
-    currentPlayer.takeTurn = true;
+    turnsTaken++
+    console.log(turnsTaken)
     var counter = 10
     var timer = document.querySelector('.timer')
     var theIntervalId = setInterval(fn, 1000)
@@ -62,6 +63,9 @@ newGame.on('click', function() {
             theFly.hide('fast');
             currentPlayer = p2
             newGame.show('#play-game').text(currentPlayer.name + "'s Turn")
+                if (turnsTaken === 2){
+                    findWinner();
+                }
             // if p1 and p2 have both clicked, check score and announce winner
         } else {
             counter = (counter - 1)
@@ -117,11 +121,11 @@ newGame.on('click', function() {
 
     var winner = ''
     function findWinner() {
-        if ((p1.score > p2.score) && (p2.takeTurn = true)) {
+        if (p1.score > p2.score) {
             winner = p1.name;
             alert (p1.name + " is the Winner!");
             resetGame(); // <--- Not Defined Yet
-        } else if (((p1.score > 0) == (p2.score > 0)) && (p2.takeTurn = true)) {
+        } else if ((p1.score > 0) == (p2.score > 0)) {
             prompt ("It's a Tie! Play again!");
             resetGame();
         } else { 
