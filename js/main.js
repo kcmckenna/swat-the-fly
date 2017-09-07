@@ -1,11 +1,10 @@
 // Enter player names
 
-var p1 = {score: 0, name: '', board: $('#player-one-score'), takeTurn: false}
-var p2 = {score: 0, name: '', board: $('#player-two-score'), takeTurn: false}
+var p1 = {score: 0, name: '', board: $('#player-one-score')}
+var p2 = {score: 0, name: '', board: $('#player-two-score')}
 var currentPlayer = p1 
-// var players = {p1, p2}
-// var switchPlayer = p2
 var turnsTaken = 0
+
 // Function to retrieve names and add to board
 
 function getNames() {
@@ -63,9 +62,9 @@ newGame.on('click', function() {
             newGame.show('#play-game').text(currentPlayer.name + ", GO!")
                 if (turnsTaken === 2){
                     newGame.hide('#play-game');
+                     // After two turns, check score and announce winner
                     findWinner();
                 }
-            // if p1 and p2 have both clicked, check score and announce winner
         } else {
             counter = (counter - 1);
             timer.innerHTML = "Timer: " + counter
