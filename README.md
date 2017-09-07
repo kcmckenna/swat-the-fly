@@ -1,4 +1,4 @@
-![swat-the-fly-logo](/Users/kevincmckenna/WDI_51/w03/swat-the-fly/images/swat-the-fly-logo.png)
+![swat-the-fly-logo](images/swat-the-fly-logo.png)
 
 <hr>
 
