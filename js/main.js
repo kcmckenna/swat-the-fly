@@ -43,7 +43,7 @@ newGame.on('click', function() {
     newGame.hide('#play-game');
     // Timer Starts
     var flyBuzzing = new Audio ('sounds/fly_buzzing.wav');
-    // credit to soundbible.com for audio (http://soundbible.com/396-Fly-Buzzing.html)
+    // credit to soundbible.com for audio (https://soundbible.com/396-Fly-Buzzing.html)
     flyBuzzing.loop = true
     flyBuzzing.play();
     turnsTaken++
@@ -98,7 +98,7 @@ newGame.on('click', function() {
     $(theFly).click(function() {
         console.log('fly has been swatted');
         var flySplat = new Audio('sounds/fly_splat.mp3');
-        // credit to soundbible.com for audio (http://soundbible.com/tags-splat.html)
+        // credit to soundbible.com for audio (https://soundbible.com/tags-splat.html)
         flySplat.play()
         currentPlayer.score = currentPlayer.score + 1;
         console.log(currentPlayer.score)
