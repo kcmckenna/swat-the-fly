@@ -64,6 +64,7 @@ newGame.on('click', function() {
             currentPlayer = p2
             newGame.show('#play-game').text(currentPlayer.name + "'s Turn")
                 if (turnsTaken === 2){
+                    newGame.hide('#play-game')
                     findWinner();
                 }
             // if p1 and p2 have both clicked, check score and announce winner
@@ -136,19 +137,16 @@ newGame.on('click', function() {
         $("#game-container").append(winner).text(winner + "is the Winner!")
         winner.fadeIn(1000)
         }
+        // Reset the Game
+    function resetGame () {
+        newGame.show('#play-game').text("Play Again?!")
+        $('.form-bar').fadeIn('slow');
+        getNames(); 
+        currentPlayer = p1
+    }
     }
 })
 
-// var timeUp = setTimeout(theTimer, 30000);
-//     function theTimer() {
-//         switchPlayer();
 
-// Restart game
 
-// function resetGame () {
-//     newGame.show('#play-game').text("Play Again?!")
-//     $theForm = ''
-//     theFly = ''
-//     p1 = ''
-//     p2 = '' 
-// }
+
