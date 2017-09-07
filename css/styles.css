@@ -77,6 +77,7 @@ h1 {
 #game-container {
     display: block;
     background-image: url(../images/grid_background.gif);
+    /* Image provided by http://powwell.tumblr.com/post/53055694614/tangle */
     background-size: 100%;
     width: 600px;
     height: 600px;

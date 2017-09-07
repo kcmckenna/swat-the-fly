@@ -48,7 +48,7 @@ newGame.on('click', function() {
     flyBuzzing.play();
     turnsTaken++
     console.log(turnsTaken)
-    var counter = 10
+    var counter = 15
     var timer = document.querySelector('.timer')
     var theIntervalId = setInterval(fn, 1000)
     function fn(){
