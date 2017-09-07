@@ -11,26 +11,26 @@ var turnsTaken = 0
 function getNames() {
     p1.name = document.getElementById('p1-name').value;
     document.getElementById('player-one-name').innerText = p1.name + ": ";
-    console.log(p1.name)
+    console.log(p1.name);
     p2.name = document.getElementById('p2-name').value;
     document.getElementById('player-two-name').innerText = p2.name + ": ";
-    console.log(p2.name)
+    console.log(p2.name);
 }
 
 // Input form used to enter names
 
-var $theForm = $('form')
+var $theForm = $('form');
 $theForm.on('submit', function(event){
     if (document.getElementById('p1-name').value === '') {
-        confirm('Enter your Name!')
-        console.log('No Names Added')
+        alert('Enter your Name!');
+        console.log('No Names Added');
     } if (document.getElementById('p2-name').value === '') {
-        confirm('Enter your Name!')
-        console.log('No Names Added')
+        alert('Enter your Name!');
+        console.log('No Names Added');
     } else { 
         event.preventDefault();
         getNames();
-        console.log('Names Added')
+        console.log('Names Added');
         $('.form-bar').fadeOut('fast');
         $('#play-game').fadeIn(2000);
     }
@@ -38,15 +38,15 @@ $theForm.on('submit', function(event){
 
 // Start game
 
-var newGame = $('#play-game')
+var newGame = $('#play-game');
 newGame.on('click', function() {
     // Hide Start Button
-    newGame.hide('#play-game')
+    newGame.hide('#play-game');
     // Timer Starts
-    var flyBuzzing = new Audio ('sounds/fly_buzzing.wav')
+    var flyBuzzing = new Audio ('sounds/fly_buzzing.wav');
     // credit to soundbible.com for audio (http://soundbible.com/396-Fly-Buzzing.html)
     flyBuzzing.loop = true
-    flyBuzzing.play()
+    flyBuzzing.play();
     turnsTaken++
     console.log(turnsTaken)
     var counter = 10
@@ -57,33 +57,33 @@ newGame.on('click', function() {
             clearInterval(theIntervalId)
             timer.innerHTML = "Timer: " + counter
             console.log('Time is Done')
-            flyBuzzing.pause()
+            flyBuzzing.pause();
             theFly.hide('fast');
             currentPlayer = p2
             newGame.show('#play-game').text(currentPlayer.name + ", GO!")
                 if (turnsTaken === 2){
-                    newGame.hide('#play-game')
+                    newGame.hide('#play-game');
                     findWinner();
                 }
             // if p1 and p2 have both clicked, check score and announce winner
         } else {
-            counter = (counter - 1)
+            counter = (counter - 1);
             timer.innerHTML = "Timer: " + counter
-            console.log('Time is Ticking')
+            console.log('Time is Ticking');
         }
     }
 
     // Make Fly Appear
 
-    var theFly = $('<img src="images/fly.gif">')
+    var theFly = $('<img src="images/fly.gif">');
     // Source for fly image (https://atomic8497.deviantart.com/art/Fly-651283182)
-    $("#game-container").append(theFly)
+    $("#game-container").append(theFly);
     function showFly() {
         theFly.css ({
             left: Math.random() * 550,
             top: Math.random() * 550,
         })
-        theFly.fadeIn(1000)
+        theFly.fadeIn(1000);
         setInterval(function (){
             // theFly.animate ({
             //     left: Math.random() * 550,
@@ -97,18 +97,18 @@ newGame.on('click', function() {
     // and Add 1 pt to Current Player's Score
     
     $(theFly).click(function() {
-        console.log('fly has been swatted')
-        var flySplat = new Audio('sounds/fly_splat.mp3')
+        console.log('fly has been swatted');
+        var flySplat = new Audio('sounds/fly_splat.mp3');
         // credit to soundbible.com for audio (http://soundbible.com/tags-splat.html)
         flySplat.play()
         currentPlayer.score = currentPlayer.score + 1;
         console.log(currentPlayer.score)
         currentPlayer.board.text(currentPlayer.score)
-        console.log('score added to player scoreboard')
+        console.log('score added to player scoreboard');
         $(this).hide();
             if (counter != 0) {
                 showFly();
-                console.log('new fly appeared')
+                console.log('new fly appeared');
             }
     })  
 
@@ -119,31 +119,23 @@ newGame.on('click', function() {
         if (p1.score > p2.score) {
             winner = p1.name;
             console.log(p1.name + " is the Winner!");
-            $("#game-container").append(winner).text(winner + " is the Winner!")
-            resetGame();
+            $("#game-container").append(winner).text(winner + " is the Winner!");
+            setTimeout(function(){
+                location.reload();
+            },10000)
         } else if (p1.score < p2.score) {
             winner = p2.name;
             console.log(p2.name + " is the Winner!");
-            $("#game-container").append(winner).text(winner + " is the Winner!")
-            resetGame();
+            $("#game-container").append(winner).text(winner + " is the Winner!");
+            setTimeout(function(){
+                location.reload();
+            },10000)
         } else { 
-            alert ("It's a Tie! Play again!");
-            resetGame();
+            console.log("It's a tie!");
+            $("#game-container").append(winner).text("It's a Tie! Play again!");
+            setTimeout(function(){
+                location.reload();
+            },10000)
         }
-        resetGame();
-        // Reset the Game
-    function resetGame () {
-        event.preventDefault();
-        newGame.show('#play-game').text("Play Again?!")
-        $('.form-bar').fadeIn('fast');
-        $('#play-game').fadeIn(2000);
-        getNames();
-        console.log('Game Reset')
-        var currentPlayer = p1
-    }
     }
 })
-
-
-
-
