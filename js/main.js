@@ -60,7 +60,7 @@ newGame.on('click', function() {
             flyBuzzing.pause()
             theFly.hide('fast');
             currentPlayer = p2
-            newGame.show('#play-game').text(currentPlayer.name + ", you're up!")
+            newGame.show('#play-game').text(currentPlayer.name + ", GO!")
                 if (turnsTaken === 2){
                     newGame.hide('#play-game')
                     findWinner();
@@ -130,11 +130,15 @@ newGame.on('click', function() {
             alert ("It's a Tie! Play again!");
             resetGame();
         }
+        resetGame();
         // Reset the Game
     function resetGame () {
+        event.preventDefault();
         newGame.show('#play-game').text("Play Again?!")
-        $('.form-bar').fadeIn('slow');
-        getNames(); 
+        $('.form-bar').fadeIn('fast');
+        $('#play-game').fadeIn(2000);
+        getNames();
+        console.log('Game Reset')
         var currentPlayer = p1
     }
     }

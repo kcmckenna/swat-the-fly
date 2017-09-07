@@ -67,8 +67,8 @@ h1 {
     background: yellow;
     position: fixed;
     display: none;
-    margin: 285px 90px;
-    width: 100px;
+    margin: 287px -70px;
+    width: 125px;
     height: 35px; 
     font-family: 'VT323', monospace;
     font-size: 25px;
@@ -76,7 +76,8 @@ h1 {
 
 #game-container {
     display: block;
-    background-image: url("http://www.austop.net.au/media/catalog/category/3d-wood-table-top-background-with-tabletop-background-tabletop-background-tabletop.jpg");
+    background-image: url(../images/grid_background.gif);
+    background-size: 100%;
     width: 600px;
     height: 600px;
     border: 10px ridge orange;
