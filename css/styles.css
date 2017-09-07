@@ -1,6 +1,6 @@
 h2 {
     color: #F5D026;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 5px 5px #494949;
     text-align: center;
     font-size: 30px;
@@ -8,32 +8,43 @@ h2 {
 
 span {
     color: #F5D026;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 3px 3px #494949;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 #p1-score-text {
     color: #F5D026;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 3px 3px #494949;
     float: left;
     display: block;
     margin: 0px 40px;
 }
 
+.custom { 
+    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto;
+    color: black;
+    font-family: 'VT323', monospace;
+    text-shadow: 3px 3px #494949;
+    font-size: 30px;
+    width: 15px;
+    height: 15px;
+}
+
 .timer {
     color: #F5D026;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 3px 3px #494949;
+    font-size: 27px;
     position: fixed;
     display: block;
-    margin: -10px 0px 0px 265px;
+    margin: 0px 0px 0px 265px;
 }
 
 #p2-score-text{
     color: #F5D026;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 3px 3px #494949;
     float: right;
     display: block;
@@ -43,11 +54,11 @@ span {
 h1 {
     color: #F5D026;
     max-width: 400px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 5px 5px #494949;
-    font-size: 55px;
-    margin-bottom: 68px;
-    margin-left: -20px;
+    font-size: 75px;
+    margin-bottom: 73px;
+    margin-left: -24px;
     clear: both;
 }
 
@@ -59,8 +70,8 @@ h1 {
     margin: 285px 90px;
     width: 100px;
     height: 35px; 
-    font-family: 'Gloria Hallelujah', cursive;
-    font-size: 15px;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
 }
 
 #game-container {
@@ -69,38 +80,36 @@ h1 {
     width: 600px;
     height: 600px;
     border: 10px ridge orange;
+    text-align: center;
+    font-size: 60px;
     cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto;
 }
 
+form {
+    margin-top: -48px;
+    margin-left: inherit;
+    margin-right: 240px;
+}
+
 .form-bar{
-    margin-left: 150px; 
+    margin-left: 130px; 
 }
 
 input {
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
+    font-size: 19px;
     width: 100px;
 }
 
 .submit {
     height: 25px;
     width: 100px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 18px;
+    color: wheat;
+    font-family: 'VT323', monospace;
+    background: orangered;
 }
 
-/* .new-fly {
-    width: 40px;
-    height: 40px; 
-    display: none;
-    position: absolute;
-    color: white;
-    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
-} */
-
-.custom { 
-    cursor: url(http://www.i2clipart.com/cliparts/b/4/2/8/128045b428277cc75c4bbc82ce64aedb87d4b1.png) 95 35, auto; 
-    width: 15px;
-    height: 15px;
-}
 img {
     width: 40px;
     height: 40px; 
@@ -113,7 +122,7 @@ img {
 .winner {
     color: #F5D026;
     max-width: 400px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'VT323', monospace;
     text-shadow: 5px 5px #494949;
     font-size: 55px;
     margin-bottom: 45px;

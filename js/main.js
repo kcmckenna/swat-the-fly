@@ -32,11 +32,9 @@ $theForm.on('submit', function(event){
         getNames();
         console.log('Names Added')
         $('.form-bar').fadeOut('fast');
-        $('#play-game').fadeIn(2700);
+        $('#play-game').fadeIn(2000);
     }
 })
-
-// $('.form-bar').hide(); // Remove this line to show the form
 
 // Start game
 
@@ -62,7 +60,7 @@ newGame.on('click', function() {
             flyBuzzing.pause()
             theFly.hide('fast');
             currentPlayer = p2
-            newGame.show('#play-game').text(currentPlayer.name + "'s Turn")
+            newGame.show('#play-game').text(currentPlayer.name + ", you're up!")
                 if (turnsTaken === 2){
                     newGame.hide('#play-game')
                     findWinner();
@@ -74,9 +72,6 @@ newGame.on('click', function() {
             console.log('Time is Ticking')
         }
     }
-                // if (p2.takeTurn = true) {
-                //     findWinner();
-                // }
 
     // Make Fly Appear
 
@@ -84,7 +79,6 @@ newGame.on('click', function() {
     // Source for fly image (https://atomic8497.deviantart.com/art/Fly-651283182)
     $("#game-container").append(theFly)
     function showFly() {
-        // $(this).show();
         theFly.css ({
             left: Math.random() * 550,
             top: Math.random() * 550,
@@ -124,25 +118,24 @@ newGame.on('click', function() {
     function findWinner() {
         if (p1.score > p2.score) {
             winner = p1.name;
-            alert (p1.name + " is the Winner!");
-            resetGame(); // <--- Not Defined Yet
-        } else if ((p1.score > 0) == (p2.score > 0)) {
-            prompt ("It's a Tie! Play again!");
+            console.log(p1.name + " is the Winner!");
+            $("#game-container").append(winner).text(winner + " is the Winner!")
+            resetGame();
+        } else if (p1.score < p2.score) {
+            winner = p2.name;
+            console.log(p2.name + " is the Winner!");
+            $("#game-container").append(winner).text(winner + " is the Winner!")
             resetGame();
         } else { 
-            winner = p2.name;
-            alert (p2.name + " is the Winner!");
+            alert ("It's a Tie! Play again!");
             resetGame();
-        var winnerFound = $('<div>').addClass('winner').text('WINNER')
-        $("#game-container").append(winner).text(winner + "is the Winner!")
-        winner.fadeIn(1000)
         }
         // Reset the Game
     function resetGame () {
         newGame.show('#play-game').text("Play Again?!")
         $('.form-bar').fadeIn('slow');
         getNames(); 
-        currentPlayer = p1
+        var currentPlayer = p1
     }
     }
 })
