@@ -50,5 +50,5 @@ Ready? [PLAY HERE](https://kcmckenna.github.io/swat-the-fly/?)
 
 ### Acknowledgments
 
-Thanks to GA, my instructors & T.A.'s, Google searches, [LogoMakr](https://logomakr.com/) for the logo, and the unhealthy amount of coffee consumed to help make this game functioning properly.
+Thanks to GA, my instructors & T.A.'s, Google searches, [LogoMakr](https://logomakr.com/) for the logo, and the unhealthy amount of coffee consumed to help make this game function properly.
 
