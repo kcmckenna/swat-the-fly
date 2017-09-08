@@ -1,6 +1,6 @@
 ![swat-the-fly-logo](images/swat-the-fly-logo.png)
 
---
+<hr>
 
 ### How to Play:
 
@@ -14,7 +14,8 @@ The player with the most successful "swats" [points] is declared the winner. The
 
 Ready? [PLAY HERE](https://kcmckenna.github.io/swat-the-fly/?)
 
---
+<hr>
+
 ### Built With:
 
 - HTML, CSS, JavaScript and jQuery library.
