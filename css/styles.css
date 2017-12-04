@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
 h2 {
     color: #F5D026;
     font-family: 'VT323', monospace;
@@ -37,7 +41,7 @@ span {
     font-family: 'VT323', monospace;
     text-shadow: 3px 3px #494949;
     font-size: 27px;
-    position: fixed;
+    position: absolute;
     display: block;
     margin: 0px 0px 0px 265px;
 }
